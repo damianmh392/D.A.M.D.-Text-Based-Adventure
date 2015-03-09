@@ -5,6 +5,28 @@
 #   Micah Belden
 #   Deryk Patraw
 
+
+
+
+########## GIT CODE NEEDED ##########
+'''
+
+cd 'program directory'
+git pull origin master
+    #####work on program#####
+git add .
+git status
+git commit -m "state what you did for the program"
+git status
+git push origin master
+
+'''
+
+
+
+
+
+
 from tkinter import *
 import tkinter.simpledialog
 import tkinter.messagebox
