@@ -47,8 +47,7 @@ def east()
 
 
 ###Micah's Functions###
-
-
+def west()
 
 ###Deryk's Functions###
 
