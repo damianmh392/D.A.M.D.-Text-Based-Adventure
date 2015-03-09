@@ -72,7 +72,7 @@ def east()
 def west()
 
 ###Deryk's Functions###
-
+def north()
 
 
 ### Main ###
