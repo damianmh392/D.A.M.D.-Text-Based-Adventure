@@ -41,7 +41,9 @@ def south():
 
 
 ###Andrew's Functions###
-
+#lets start how to do this thing#
+def east()    
+    
 
 
 ###Micah's Functions###
