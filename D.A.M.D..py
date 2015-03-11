@@ -59,20 +59,28 @@ def intro():
 
 ###Damian's Functions###
 def south():
-    messagebox.showinfo("South","")
+    messagebox.showinfo("South","You headed down the south path and arive at a large city after a lengthy" +
+                        " trek. You walk into the bustling city and shortly after a hobo aproches you." +
+                        " This decrepid man in tattered clothes askes you ''You! Do you want some beans?" +
+                        " They're great, I guarantee they're quality beans!''")
+    simpledialog.askstring("","")
+    
 
 
 ###Andrew's Functions###
 #lets start how to do this thing#
-def east()    
+def east():
+    messagebox.showinfo("","")
     
 
 
 ###Micah's Functions###
-def west()
+def west():
+    messagebox.showinfo("","")
 
 ###Deryk's Functions###
-def north()
+def north():
+    messagebox.showinfo("","")
 
 
 ### Main ###
