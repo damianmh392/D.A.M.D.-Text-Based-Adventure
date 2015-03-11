@@ -59,13 +59,37 @@ def intro():
 
 ###Damian's Functions###
 def south():
-    messagebox.showinfo("South","You headed down the south path and arive at a large city after a lengthy" +
-                        " trek. You walk into the bustling city and shortly after a hobo aproches you." +
+    messagebox.showinfo("South","You headed down the south path and arive at a fork in the road. One" +
+                        " fork leads to a large mountian, practicallly untouched by man, and the other" +
+                        " to a busy city.")
+    approch = simpledialog.askstring("Where Now?","Do you want to go to the City or the Mountian?" +
+                                     " (Mountian/City)")
+    if approch == "City":
+        city()
+    elif approch == "Mountian":
+        mountain()
+    else:
+        south()
+
+def city():
+    messagebox.showinfo("City","You walk into the bustling city and shortly after a hobo aproches you." +
                         " This decrepid man in tattered clothes askes you ''You! Do you want some beans?" +
                         " They're great, I guarantee they're quality beans!''")
-    simpledialog.askstring("","")
+    approch = simpledialog.askstring("Beans?","Do you accept the hobo's beans? (Yes/No)")
+    if beans == "Yes":
+        yesbeans()
+    elif beans == "No":
+        nobeans()
+    else:
+        city()        
+
+def mountain():
+    messagebox.showinfo("Mountian","You trek to the mountian and find yourself at home. you decide to live" +
+                        " there as a mountian hermit. after several months of living on the mountain, you" +
+                        " are approched by Sassquach"
     
 
+    
 
 ###Andrew's Functions###
 #lets start how to do this thing#
