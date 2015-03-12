@@ -70,9 +70,9 @@ def south():
 ###Andrew's Functions###
 #lets start how to do this thing#
 def east():
-    messagebox.showinfo("East"," Your journey begins as of now yet there is still yet a chance"+
-                        " to turn back if you so choose"+
-                        " but only a coward turns back from any adventure presented to him." )
+    messagebox.showinfo("East"," Your journey begins as of now. Yet there is still yet a chance"+
+                        " to turn back, if you so choose but only a coward turns back from any"+
+                        " adventure presented to him." )
     goback = simpledialog.askstring("turn back?"," Do you desire a different path?")
     if goback == "yes":
         intro()
