@@ -60,13 +60,13 @@ def intro():
 ###Damian's Functions###
 def south():
     messagebox.showinfo("South","You headed down the south path and arive at a fork in the road. One" +
-                        " fork leads to a large mountian, practicallly untouched by man, and the other" +
+                        " fork leads to a large mountain, practicallly untouched by man, and the other" +
                         " to a busy city full of people.")
     approch = simpledialog.askstring("Where Now?","Do you want to go to the City or the Mountian?" +
-                                     " (Mountian/City)")
+                                     " (Mountain/City)")
     if approch == "City":
         city()
-    elif approch == "Mountian":
+    elif approch == "Mountain":
         mountains()
     else:
         south()
@@ -83,20 +83,39 @@ def city():
     else:
         city()        
 
+def yesbeans():
+    messagebox.showinfo("","")
+
+def nobeans():
+    messagebox.showinfo("","")
+    
 def mountains():
-    messagebox.showinfo("Mountian","You trek to the mountian and find yourself at home. you decide to live" +
-                        " there as a mountian hermit. After several months of living on the mountain, you" +
+    messagebox.showinfo("Mountain","You trek to the mountain and find yourself at home. you decide to live" +
+                        " there as a mountain hermit. After several months of living on the mountain, you" +
                         " are approched by Sassquach. The massive creature approches you, it groans and" +
-                        " whoops at you, and then waits for a reply"
+                        " whoops at you, and then waits for a reply")
+<<<<<<< HEAD
     reply = simpledialog.askstring("Don't Sass the Quatch","How do you want to resond to Sassquatch's" +
                                    " 'question'. (Whoop/Groan)")
+=======
+    reply = simpledialog.askstring("Don't Sass the Squatch","How do you want to resond to Sassquatch's" +
+                                   " 'question'. (Whoop/Grunt)")
+>>>>>>> 7766ffa26cdbf3a697ee69e4b2da4ab877450bd2
     if reply == "Whoop":
         jacklinks()
-    elif reply == "Groan":
+    elif reply == "Grunt":
         sassed()                
                         
-    
-
+def jacklinks():
+    messagebox.showinfo("You're Bilingual","you make a a big whoop. Sassquatch replys with another whoop and" +
+                        " pulls out a bag of Jack Links beef jerky and hands it to you. you take the delicious" +
+                        " jerky and Sassquatch renturns to the wilds of the mountain. With a full stomach you" +
+                        " continue your life as a hermit and live alone for the rest of your life.")                        
+def sassed():                         
+    messagebox.showinfo("You Sassed the Squatch","You grunt at Sassquatch. Clearly angered by your reply, he hits" +
+                        " you on the head, knocking you out cold. you wake up to see that Sassquatch has taken you home" +
+                        " and shows no sign of leaving. forced from your home you perish being unable to find food or"+
+                        " shelter.")
     
 
 ###Andrew's Functions###
@@ -118,7 +137,7 @@ def easternjourney():
                         " can make it there by nightfall, but you also see possible ruins, such"+
                         " a place could hold a mighty treasure. however with the mountain such a large"+
                         " area must hold an ancient secret... Which do you choose to go? there is"+
-                        " still an oppertunity to turn back. but it is the last chance todo so.")
+                        " still an oppertunity to turn back. but it is the last chance to do so.")
     
     mtruins = simpledialog.askstring("What is your decision?","you can 'go back', 'mountain', or 'ruins'")
     if mtruins == "go back":
@@ -130,8 +149,19 @@ def easternjourney():
     else:
         easternjourney()
 
+def mountain():
+    messagebox.showinfo("mountain","you arrived earlier than you must have thought its still light out as the sun sets"+
+                         " in front of you, but that cant be right!!? where are you? whats happening! you check"+
+                         " behind youand indeed there is another sun there. curiosity flows through your mind as"+
+                         " you see this phenomena. you still treck towards the mountain in hopes of finding an "+
+                         " ancient secret. or any explanation of this land.")
 
-   
+def ruins():
+    messagebox.showinfo("ruins","you arrived earlier than you must have thought its still light out as the sun sets"+
+                         " in front of you, but that cant be right!!? where are you? whats happening! you check"+
+                         " behind youand indeed there is another sun there. curiosity flows through your mind as"+
+                         " you see this phenomena. you still treck towards the ruins in hopes of finding a "+
+                         " mighty treasure. or any explanation of this land.")    
 
 ###Micah's Functions###
 def west():
