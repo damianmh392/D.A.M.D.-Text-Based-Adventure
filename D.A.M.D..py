@@ -86,7 +86,7 @@ def easternjourney():
                         " can make it there by nightfall, but you also see possible ruins, such"+
                         " a place could hold a mighty treasure. however with the mountain such a large"+
                         " area must hold an ancient secret... Which do you choose to go? there is"+
-                        " still an oppertunity to turn back. but it is the last chance todo so.")
+                        " still an oppertunity to turn back. but it is the last chance to do so.")
     
     mtruins = simpledialog.askstring("What is your decision?","you can 'go back', 'mountain', or 'ruins'")
     if mtruins == "go back":
