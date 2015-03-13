@@ -40,7 +40,7 @@ def intro():
     messagebox.showinfo("The Crossroads","You wake up in a four way intersection. there are small dirt" +
                         " paths in a field, one going North, one South, one East, and one West. Which" +
                         " path do you wish to choose?")
-    path = simpledialog.askstring("Where to Go","Type ""North"" to go north and so on to choose your path.")
+    path = simpledialog.askstring("Where to Go","Type the direction you wish to go, choose your path. your options are ''North, South, East, and West''")
     if path == "North":
         north()
 
@@ -94,14 +94,36 @@ def mountain():
 ###Andrew's Functions###
 #lets start how to do this thing#
 def east():
-    messagebox.showinfo("East"," Your journey begins as of now yet there is still yet a chance to turn back if you so choose"+
-                        "but only a coward turns back from any adventure presented to him." )
+    messagebox.showinfo("East"," Your journey begins as of now. Yet there is still yet a chance"+
+                        " to turn back, if you so choose but only a coward turns back from any"+
+                        " adventure presented to him." )
     goback = simpledialog.askstring("turn back?"," Do you desire a different path?")
-    if goback = yes
-        
-                        
-                           
+    if goback == "yes":
+        intro()
+    elif goback == "no":
+        easternjourney()
+    else:
+        east()                
 
+def easternjourney():
+    messagebox.showinfo("Mountainous Ruins","you see in the disatance a lone Mountain and you"+
+                        " can make it there by nightfall, but you also see possible ruins, such"+
+                        " a place could hold a mighty treasure. however with the mountain such a large"+
+                        " area must hold an ancient secret... Which do you choose to go? there is"+
+                        " still an oppertunity to turn back. but it is the last chance todo so.")
+    
+    mtruins = simpledialog.askstring("What is your decision?","you can 'go back', 'mountain', or 'ruins'")
+    if mtruins == "go back":
+        east()
+    elif mtruins == "mountain":
+        mountain()
+    elif mtruins == "ruins":
+        ruins()
+    else:
+        easternjourney()
+
+
+   
 
 ###Micah's Functions###
 def west():
@@ -115,7 +137,7 @@ def north():
 ### Main ###
 intro()
 
-root.destroy()        
+root.destroy()     
         
 
 
