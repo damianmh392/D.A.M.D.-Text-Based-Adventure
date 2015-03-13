@@ -61,13 +61,13 @@ def intro():
 def south():
     messagebox.showinfo("South","You headed down the south path and arive at a fork in the road. One" +
                         " fork leads to a large mountian, practicallly untouched by man, and the other" +
-                        " to a busy city.")
+                        " to a busy city full of people.")
     approch = simpledialog.askstring("Where Now?","Do you want to go to the City or the Mountian?" +
                                      " (Mountian/City)")
     if approch == "City":
         city()
     elif approch == "Mountian":
-        mountain()
+        mountains()
     else:
         south()
 
@@ -83,10 +83,18 @@ def city():
     else:
         city()        
 
-def mountain():
+def mountains():
     messagebox.showinfo("Mountian","You trek to the mountian and find yourself at home. you decide to live" +
-                        " there as a mountian hermit. after several months of living on the mountain, you" +
-                        " are approched by Sassquach"
+                        " there as a mountian hermit. After several months of living on the mountain, you" +
+                        " are approched by Sassquach. The massive creature approches you, it groans and" +
+                        " whoops at you, and then waits for a reply"
+    reply = simpledialog.askstring("Don't Sass the Quatch","How do you want to resond to Sassquatch's" +
+                                   " 'question'. (Whoop/Groan)")
+    if reply == "Whoop":
+        jacklinks()
+    elif reply == "Groan":
+        sassed()                
+                        
     
 
     
