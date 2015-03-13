@@ -31,16 +31,17 @@ from tkinter import *
 import tkinter.simpledialog
 import tkinter.messagebox
 
+
 root = Tk()
 w = Label(root, text="A D.A.M.D. Adventure")
 w.pack()
 
 ###Intro###
 def intro():
-    messagebox.showinfo("The Crossroads","You wake up in a four way intersection. there are small dirt" +
+    messagebox.showinfo("The Crossroads","You wake up in a four way intersection. There are small dirt" +
                         " paths in a field, one going North, one South, one East, and one West. Which" +
                         " path do you wish to choose?")
-    path = simpledialog.askstring("Where to Go","Type the direction you wish to go, choose your path. your options are ''North, South, East, and West''")
+    path = simpledialog.askstring("Where to Go","Type the direction you wish to go, choose your path. Your options are ''North, South, East, and West''")
     if path == "North":
         north()
 
@@ -87,7 +88,7 @@ def mountains():
     messagebox.showinfo("Mountian","You trek to the mountian and find yourself at home. you decide to live" +
                         " there as a mountian hermit. After several months of living on the mountain, you" +
                         " are approched by Sassquach. The massive creature approches you, it groans and" +
-                        " whoops at you, and then waits for a reply"
+                        " whoops at you, and then waits for a reply.")
     reply = simpledialog.askstring("Don't Sass the Quatch","How do you want to resond to Sassquatch's" +
                                    " 'question'. (Whoop/Groan)")
     if reply == "Whoop":
@@ -133,9 +134,45 @@ def easternjourney():
 
    
 
-###Micah's Functions###
+########################Micah's Functions########################
+        
+        
 def west():
-    messagebox.showinfo("","")
+    messagebox.showinfo("West","You have to decided to follow the Western Sunset, leading you to a fork in the road. You have a choice to make: Do you take"
+                        "the road less traveled, or the road often traveled? You may also go back to where you woke up and choose a different direction to follow.")
+    decision = simpledialog.askstring("Which way do you go?", "Type: 'go back' to go back, 'less traveled' to take the road less traveled, or 'often traveled' to take the often"
+                                      "the road often traveled.")
+
+    if decision == "go back":
+        intro()
+    elif decision == "less traveled":
+        lesstraveled()
+    elif decision == "often traveled":
+        oftentraveled()
+    else:
+        messagebox.showinfo("Incorrect", "That isn't an option.")
+        west()
+        
+def lesstraveled():
+    decision1 = simpledialog.askstring("The road less traveled", "As you head down the far less beaten path, you notice yourself trekking further" +
+                        " into an eerie forest. After hours of hiking, you come across a magnificent cabin! Do you go inside it, or continue walking on" +
+                        " the path? Type 'cabin' to go into the cabin, or 'walk' to keep on walking.")
+
+#def cabin():
+#def rabidman():
+    
+#def forest():
+#def rabidanimals():
+
+#def oftentraveled():
+
+#def sunnyhighway():
+#def sunglare():
+
+#def backroad():
+#def getmugged():#
+
+
 
 ###Deryk's Functions###
 def north():
