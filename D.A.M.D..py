@@ -94,13 +94,13 @@ def mountains():
                         " there as a mountain hermit. After several months of living on the mountain, you" +
                         " are approched by Sassquach. The massive creature approches you, it groans and" +
                         " whoops at you, and then waits for a reply")
-<<<<<<< HEAD
+
     reply = simpledialog.askstring("Don't Sass the Quatch","How do you want to resond to Sassquatch's" +
                                    " 'question'. (Whoop/Groan)")
-=======
+
     reply = simpledialog.askstring("Don't Sass the Squatch","How do you want to resond to Sassquatch's" +
                                    " 'question'. (Whoop/Grunt)")
->>>>>>> 7766ffa26cdbf3a697ee69e4b2da4ab877450bd2
+
     if reply == "Whoop":
         jacklinks()
     elif reply == "Grunt":
