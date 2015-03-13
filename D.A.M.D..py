@@ -87,7 +87,7 @@ def mountains():
     messagebox.showinfo("Mountian","You trek to the mountian and find yourself at home. you decide to live" +
                         " there as a mountian hermit. After several months of living on the mountain, you" +
                         " are approched by Sassquach. The massive creature approches you, it groans and" +
-                        " whoops at you, and then waits for a reply"
+                        " whoops at you, and then waits for a reply")
     reply = simpledialog.askstring("Don't Sass the Quatch","How do you want to resond to Sassquatch's" +
                                    " 'question'. (Whoop/Groan)")
     if reply == "Whoop":
@@ -130,8 +130,19 @@ def easternjourney():
     else:
         easternjourney()
 
+def mountain():
+    messagebox.showinfo("mountain","you arrived earlier than you must have thought its still light out as the sun sets"+
+                         " in front of you, but that cant be right!!? where are you? whats happening! you check"+
+                         " behind youand indeed there is another sun there. curiosity flows through your mind as"+
+                         " you see this phenomena. you still treck towards the mountain in hopes of finding an "+
+                         " ancient secret. or any explanation of this land.")
 
-   
+def ruins():
+    messagebox.showinfo("ruins","you arrived earlier than you must have thought its still light out as the sun sets"+
+                         " in front of you, but that cant be right!!? where are you? whats happening! you check"+
+                         " behind youand indeed there is another sun there. curiosity flows through your mind as"+
+                         " you see this phenomena. you still treck towards the ruins in hopes of finding a "+
+                         " mighty treasure. or any explanation of this land.")    
 
 ###Micah's Functions###
 def west():
