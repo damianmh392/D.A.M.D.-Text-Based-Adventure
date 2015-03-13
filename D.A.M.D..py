@@ -168,9 +168,71 @@ def west():
     messagebox.showinfo("","")
 
 ###Deryk's Functions###
-def north():
-    messagebox.showinfo("","")
 
+global goback
+goback = 0
+
+def north():
+    if goback == 0:
+        messagebox.showinfo("North","You decide to go north. After a few hours of walking, your path ends. Before you is a " +
+                            "dock, with a large, wooden ship, masts and all, with crew bustling around it. There is also" +
+                            " a long coastline you can walk along if you so choose.")
+    else:
+        messagebox.showinfo("North","You decide to go back onto the beach. Before you is a " +
+                            "dock, with a large, wooden ship, masts and all, with crew bustling around it. There is also" +
+                            " a long coastline you can walk along if you so choose.")
+
+    shipchoice = simpledialog.askstring("Where do you go?","Would you like to 'board' the ship, 'walk' the coastline, or 'go back' to the intersection?")
+
+    if shipchoice == "board":
+        ship()
+    elif shipchoice == "walk":
+        coast()
+    elif shipchoice == "go back":
+        intro()
+    else:
+        north()
+
+def ship():
+    messagebox.showinfo("Board the ship","You have boarded the ship. All the crew stops what they're doing and look at you curiously.")
+    boardchoice = simpledialog.askstring("What do you do?","You can 'request' a ride, attempt to 'take over' the ship, or you can avoid the awkwardness and 'go back'.")
+
+    if boardchoice == "request":
+        sail()
+    elif boardchoice == "take over":
+        pirate()
+    elif boardchoice == "go back":
+        global goback
+        goback = 1
+        north()
+    else:
+        ship()
+
+def coast():
+    coastchoice = simpledialog.askstring("Walk the coast","You decide to walk the coast. Do you wish to go 'left', 'right', or 'go back'?")
+
+    if coastchoice == "left":
+        left()
+    elif coastchoice == "right":
+        right()
+    elif coastchoice == "go back":
+        global goback
+        goback = 1
+        north()
+    else:
+        coast()
+
+def left():
+    messagebox.showinfo("Left","You decide to walk the coast. It's actually really peaceful, and you have a lot of time to think. You begin to think about yourself." +
+                        " Who are you anyway? You woke up in a fork in the road, with no memory of how you got there, who you are, and especially, why you're here.")
+    messagebox.showinfo("Left", "Why are you here? Is it happenstance? Some cosmic joke? Your life is no game, not with a certain set of choices you may choose that lead to an outcome.")
+    messagebox.showinfo("Left", "You've been deep into thought so long that it has turned night. You look up into the sky, staring into those deep, empty stars that you know you will never reach." +
+                        "You are lost. Not in direction, but life. You are damned to live the rest of your life depressed.")
+
+def right():
+    messagebox.showinfo("Right", "You decide to walk the coast. It's actually really peaceful, and you have a lot of time to think. You begin to think about yourself." +
+                        " But, just as you begin to get into thought, a giant tiger shark jumps out of the ocean and lands next to you, then eating you violently. You are damned to the digestive tract.")
+    messagebox.showinfo("THE END", "THE END")
 
 ### Main ###
 intro()
