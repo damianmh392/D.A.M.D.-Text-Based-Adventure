@@ -94,12 +94,7 @@ def mountains():
     messagebox.showinfo("Mountain","You trek to the mountain and find yourself at home. you decide to live" +
                         " there as a mountain hermit. After several months of living on the mountain, you" +
                         " are approched by Sassquach. The massive creature approches you, it groans and" +
-<<<<<<< HEAD
-                        " whoops at you, and then waits for a reply.")
-=======
                         " whoops at you, and then waits for a reply")
-
->>>>>>> 91e497bc9f986767fd7ba7a2564c765a95c98139
     reply = simpledialog.askstring("Don't Sass the Quatch","How do you want to resond to Sassquatch's" +
                                    " 'question'. (Whoop/Groan)")
 
@@ -173,9 +168,9 @@ def ruins():
         
 def west():
     messagebox.showinfo("West","You have to decided to follow the Western Sunset, leading you to a fork in the road. You have a choice to make: Do you take"
-                        "the road less traveled, or the road often traveled? You may also go back to where you woke up and choose a different direction to follow.")
-    decision = simpledialog.askstring("Which way do you go?", "Type: 'go back' to go back, 'less traveled' to take the road less traveled, or 'often traveled' to take the often"
-                                      "the road often traveled.")
+                        " the road less traveled, or the road often traveled? You may also go back to where you woke up and choose a different direction to follow.")
+    decision = simpledialog.askstring("Which way do you go?", "Type: 'go back' to go back, 'less traveled' to take the road less traveled, or 'often traveled' to" +
+                                      " take the road often traveled.")
 
     if decision == "go back":
         intro()
@@ -188,25 +183,59 @@ def west():
         west()
         
 def lesstraveled():
-    decision1 = simpledialog.askstring("The road less traveled", "As you head down the far less beaten path, you notice yourself trekking further" +
-                        " into an eerie forest. After hours of hiking, you come across a magnificent cabin! Do you go inside it, or continue walking on" +
-                        " the path? Type 'cabin' to go into the cabin, or 'walk' to keep on walking.")
-
-#def cabin():
-#def rabidman():
+    messagebox.showinfo("The road less traveled", "As you head down the far less beaten path, you notice yourself trekking further" +
+                        " into a peaceful forest. After hours of hiking, you come across a magnificent cabin! Do you go inside it, or continue walking on" +
+                        " the path into the forest? Type 'cabin' to go into the cabin, or 'forest' to keep on walking.")
     
-#def forest():
-#def rabidanimals():
+    decision1 = simpledialog.askstring("ASKING", "Type 'forest' to go into the forest, or 'cabin' to enter the cabin.")
+    
+    if decision1 == "forest":
+        forest()
 
-#def oftentraveled():
+    elif decision1 == "cabin":
+        cabin()
 
-#def sunnyhighway():
-#def sunglare():
+def forest():
+    messagebox.showinfo("THE FOREST", "You keep on walking through the beautiful woods, and listen to the serene sounds of nature; the sound of" +
+                        " squirrels playing with each other, the wind rustling in the trees, and feeling the warm sun on your face. As you listen" +
+                        " closely, the sounds start to grow louder... You open your eyes and see a large sign ahead reading 'Beware Rabid Animals!'"+
+                        " You turn around to see an army of rabid squirrels heading towards you. You attempt to run, but they throw many acorns" +
+                        " at you, causing you to fall down. They amass on your body, and carry you away just like Veruca from Willy Wonka. Except you" +
+                        " don't survive. THANKS FOR PLAYING.")
 
-#def backroad():
-#def getmugged():#
+def cabin():
+    messagebox.showinfo("THE CABIN", "You approach the large log cabin, which appears to have been untouched for many years. You enter the front door" +
+                         ", which is unlocked, and venture into the dark corridors. As you slowly proceed into the kitchen, you hear a raspy voiced man say" +
+                         " 'Hello there little one.. Come have dinner with me...' He smiles eerily, and begins walking at you with a knife. You try to" +
+                         " run but he is too quick, and caannibalizes you. Curiosity lead to cannibalism. THANKS FOR PLAYING.")
 
 
+def oftentraveled():
+    messagebox.showinfo("The road often traveled", "You take the already beaten and friendly looking path. It looks very artificial and makes the" +
+                        " forest feel somewhat more secure. After walking for some time, you come a cross a split path. One way leads to an" +
+                        " interestingly empty but sunny freeway, and the other leads to a ghetto city. Which way do you go? Type 'highway' for the" +
+                        " highway, or 'city' for the ghetto city.")
+    
+    decision2 = simpledialog.askstring("ASKING", "Type 'city' to go there, or 'highway' to go there.")
+    
+    if decision2 == "highway":
+        highway()
+    elif decision2 == "city":
+        city()
+
+def highway():
+    messagebox.showinfo("SUNNY HIGHWAY", "You walk into the large, open, sunny freeway. There are almost no cars about on the road, and whatever is there is" +
+                        " abandoned. You find a sick Corvette and decide to hotwire it. You get the engine revving, and off you go at high speeds." +
+                        " Despite your expert driving skills, a sunglare bounces off the mirror in the car that you were admiring yourself in and" +
+                        " blinds you. You veer into the divider and flip over. You were knocked unconcious, but wake up realitively unharmed, the car now" +
+                        " upside down. As you attempt to get out, a spill of gasoline is ignited by a sun ray and bursts into flame, engulfing" +
+                        " the car, and you, with it. Always wear sunglasses on sunny days. THANKS FOR PLAYING.")
+
+def city():
+    messagebox.showinfo("GHETTO CITY", "You swagger into the city, trying to fit in with the local gang members. They don't like that. They promptly mug" +
+                        " you and then leave you in the streets, crippled. You eventually get run over by a Mustang playing real life GTA with a" +
+                        " friend, who just scored bonus points for hitting a cripple. Never try to walk like a gangster. THANKS FOR PLAYING.")
+    
 
 ###Deryk's Functions###
 
