@@ -60,8 +60,8 @@ def intro():
 
 ###Damian's Functions###
 def south():
-    messagebox.showinfo("South","You headed down the south path and arive at a fork in the road. One" +
-                        " fork leads to a large mountain, practicallly untouched by man, and the other" +
+    messagebox.showinfo("South","You have headed down the South path and arive at a fork in the road. One" +
+                        " fork leads to a large mountain, practically untouched by man, and the other" +
                         " to a busy city full of people.")
     approch = simpledialog.askstring("Where Now?","Do you want to go to the City or the Mountian?" +
                                      " (Mountain/City)")
@@ -76,7 +76,7 @@ def city():
     messagebox.showinfo("City","You walk into the bustling city and shortly after a hobo aproches you." +
                         " This decrepid man in tattered clothes askes you ''You! Do you want some beans?" +
                         " They're great, I guarantee they're quality beans!''")
-    approch = simpledialog.askstring("Beans?","Do you accept the hobo's beans? (Yes/No)")
+    beans = simpledialog.askstring("Beans?","Do you accept the hobo's beans? (Yes/No)")
     if beans == "Yes":
         yesbeans()
     elif beans == "No":
@@ -85,25 +85,34 @@ def city():
         city()        
 
 def yesbeans():
-    messagebox.showinfo("Not Just Your Every Day, Ordinary Beans","")
+    messagebox.showinfo("Not Just Your Every Day, Ordinary Beans","You take the hobo's beans and crack the can open with" +
+                        " opener he lends you. Quickly after you eat the beans, you feel a funny sensation look down to see" +
+                        " that you seemingly are fading from reality and promptly blackout. You awaken to see a completely" +
+                        " different city beneath you feet. The buildings are ragged and old and the streets filled with" +
+                        " hobos. You've unknowingly transported yourself to the lost city of Hobotopolis. You decide that" +
+                        " since you are there you should live in the great metropolis as a hobo yourself and live a long" +
+                        " as a profesional hobo.")
 
 def nobeans():
-    messagebox.showinfo("","")
+    messagebox.showinfo("That's Not A Can Opener","Clearly offended and angered by your rejection of his can of beans" +
+                        " the hobo pull a knife on you and mugs you for all your money. After finding out you have no" +
+                        " no such thing you both share a greatlt awkward moment of silence before he dashes into a nearby" +
+                        " alley never to be seen again")
     
 def mountains():
     messagebox.showinfo("Mountain","You trek to the mountain and find yourself at home. you decide to live" +
                         " there as a mountain hermit. After several months of living on the mountain, you" +
-                        " are approched by Sassquach. The massive creature approches you, it groans and" +
+                        " are approched by Sassquach. The massive creature approches you, it grunts and" +
                         " whoops at you, and then waits for a reply.")
-    reply = simpledialog.askstring("Don't Sass the Quatch","How do you want to resond to Sassquatch's" +
-                                   " 'question'. (Whoop/Groan)")
+    reply = simpledialog.askstring("Don't Sass the Squatch","How do you want to resond to Sassquatch's" +
+                                   " 'question'. (Whoop/Grunt)")
     if reply == "Whoop":
         jacklinks()
     elif reply == "Grunt":
         sassed()                
                         
 def jacklinks():
-    messagebox.showinfo("You're Bilingual","you make a a big whoop. Sassquatch replys with another whoop and" +
+    messagebox.showinfo("You're Bilingual","you make a big whoop. Sassquatch replys with another whoop and" +
                         " pulls out a bag of Jack Links beef jerky and hands it to you. you take the delicious" +
                         " jerky and Sassquatch renturns to the wilds of the mountain. With a full stomach you" +
                         " continue your life as a hermit and live alone for the rest of your life.")                        
