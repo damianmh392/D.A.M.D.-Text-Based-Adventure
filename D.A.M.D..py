@@ -31,17 +31,16 @@ from tkinter import *
 import tkinter.simpledialog
 import tkinter.messagebox
 
-
 root = Tk()
 w = Label(root, text="A D.A.M.D. Adventure")
 w.pack()
 
 ###Intro###
 def intro():
-    messagebox.showinfo("The Crossroads","You wake up in a four way intersection. There are small dirt" +
+    messagebox.showinfo("The Crossroads","You wake up in a four way intersection. there are small dirt" +
                         " paths in a field, one going North, one South, one East, and one West. Which" +
                         " path do you wish to choose?")
-    path = simpledialog.askstring("Where to Go","Type the direction you wish to go, choose your path. Your options are ''North, South, East, and West''")
+    path = simpledialog.askstring("Where to Go","Type the direction you wish to go, choose your path. your options are ''North, South, East, and West''")
     if path == "North":
         north()
 
@@ -94,12 +93,8 @@ def mountains():
     messagebox.showinfo("Mountain","You trek to the mountain and find yourself at home. you decide to live" +
                         " there as a mountain hermit. After several months of living on the mountain, you" +
                         " are approched by Sassquach. The massive creature approches you, it groans and" +
-<<<<<<< HEAD
-                        " whoops at you, and then waits for a reply.")
-=======
                         " whoops at you, and then waits for a reply")
 
->>>>>>> 91e497bc9f986767fd7ba7a2564c765a95c98139
     reply = simpledialog.askstring("Don't Sass the Quatch","How do you want to resond to Sassquatch's" +
                                    " 'question'. (Whoop/Groan)")
 
@@ -168,45 +163,9 @@ def ruins():
                          " you see this phenomena. you still treck towards the ruins in hopes of finding a "+
                          " mighty treasure. or any explanation of this land.")    
 
-########################Micah's Functions########################
-        
-        
+###Micah's Functions###
 def west():
-    messagebox.showinfo("West","You have to decided to follow the Western Sunset, leading you to a fork in the road. You have a choice to make: Do you take"
-                        "the road less traveled, or the road often traveled? You may also go back to where you woke up and choose a different direction to follow.")
-    decision = simpledialog.askstring("Which way do you go?", "Type: 'go back' to go back, 'less traveled' to take the road less traveled, or 'often traveled' to take the often"
-                                      "the road often traveled.")
-
-    if decision == "go back":
-        intro()
-    elif decision == "less traveled":
-        lesstraveled()
-    elif decision == "often traveled":
-        oftentraveled()
-    else:
-        messagebox.showinfo("Incorrect", "That isn't an option.")
-        west()
-        
-def lesstraveled():
-    decision1 = simpledialog.askstring("The road less traveled", "As you head down the far less beaten path, you notice yourself trekking further" +
-                        " into an eerie forest. After hours of hiking, you come across a magnificent cabin! Do you go inside it, or continue walking on" +
-                        " the path? Type 'cabin' to go into the cabin, or 'walk' to keep on walking.")
-
-#def cabin():
-#def rabidman():
-    
-#def forest():
-#def rabidanimals():
-
-#def oftentraveled():
-
-#def sunnyhighway():
-#def sunglare():
-
-#def backroad():
-#def getmugged():#
-
-
+    messagebox.showinfo("","")
 
 ###Deryk's Functions###
 
@@ -248,6 +207,27 @@ def ship():
         north()
     else:
         ship()
+
+def sail():
+    messagebox.showinfo("Set Sail!","You decide to set sail with the crew. You are treated as a passenger, who really does nothing and eats the sailors' food.")
+    messagebox.showinfo("Slavers!", "When you reach the end of your trip, you are ushered off the ship, only to find a man with cages and rope in front of you. " +
+                        "There's an exchange of money between the captain and the man, and despite your best efforts, you are bound and put into a cage. " +
+                        "You are damned to live the rest of your life as a slave.")
+    messagebox. showinfo("THE END", "THE END")
+
+def pirate():
+    messagebox.showinfo("Ship", "You step onto the ship, proclaiming that you are now the new captain, and to expel the old leadership. " +
+                        "All the sailors look at you funny, and the captain walks out to see the fuss.")
+    messagebox.showinfo("Challenge!", "'What do you think you're doing?!' he exclaims. 'Get off my ship!' You stare at him blankly for a few moments, " +
+                        "then slap him across the face with a glove, throwing it to the ground.")
+    messagebox.showinfo("OOOOH!", "He stands flabbergasted. You take the opportunity to hoist him up onto your shoulders and throw him overboard. " +
+                        "He falls to the ocean with a splash. He's immediately eaten by a shark.")
+    messagebox.showinfo("New Captain!", "The sailors look at you, stunned, for a moment. Then they break into cheer. " +
+                        "'Hail the new captain!' they yell. You give the order to set off to sea.")
+    messagebox.showinfo("PIRATES!", "You spend a good five years raiding coastal towns and cities in your new ship with your newfound pirate crew. " +
+                        "Unfortunately, one day you contract a sickness, and your second mate, in your weakened state, assumes command and leaves you sickened. " +
+                        "You are damned to die of scurvy.")
+    messagebox.showinfo("THE END", "THE END")
 
 def coast():
     coastchoice = simpledialog.askstring("Walk the coast","You decide to walk the coast. Do you wish to go 'left', 'right', or 'go back'?")
