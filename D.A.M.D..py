@@ -84,7 +84,7 @@ def city():
         city()        
 
 def yesbeans():
-    messagebox.showinfo("","")
+    messagebox.showinfo("Not Just Your Every Day, Ordinary Beans","")
 
 def nobeans():
     messagebox.showinfo("","")
@@ -93,14 +93,14 @@ def mountains():
     messagebox.showinfo("Mountain","You trek to the mountain and find yourself at home. you decide to live" +
                         " there as a mountain hermit. After several months of living on the mountain, you" +
                         " are approched by Sassquach. The massive creature approches you, it groans and" +
+<<<<<<< HEAD
                         " whoops at you, and then waits for a reply")
 
+=======
+                        " whoops at you, and then waits for a reply.")
+>>>>>>> 64a1b1f0fb934899e5f6179f40655b1484ebbfaa
     reply = simpledialog.askstring("Don't Sass the Quatch","How do you want to resond to Sassquatch's" +
                                    " 'question'. (Whoop/Groan)")
-
-    reply = simpledialog.askstring("Don't Sass the Squatch","How do you want to resond to Sassquatch's" +
-                                   " 'question'. (Whoop/Grunt)")
-
     if reply == "Whoop":
         jacklinks()
     elif reply == "Grunt":
