@@ -59,15 +59,17 @@ def intro():
 
 ###Damian's Functions###
 def south():
-    messagebox.showinfo("South","You headed down the south path and arive at a fork in the road. One" +
-                        " fork leads to a large mountain, practicallly untouched by man, and the other" +
+    messagebox.showinfo("South","You have headed down the South path and arive at a fork in the road. One" +
+                        " fork leads to a large mountain, practically untouched by man, and the other" +
                         " to a busy city full of people.")
-    approch = simpledialog.askstring("Where Now?","Do you want to go to the City or the Mountian?" +
-                                     " (Mountain/City)")
+    approch = simpledialog.askstring("Where Now?","Do you want to go to the City, the Mountian? Or would you want to go back" +
+                                     " (Mountain/City/Back)")
     if approch == "City":
         city()
     elif approch == "Mountain":
         mountains()
+    elif approch == "Back":
+        intro2()    
     else:
         south()
 
@@ -75,7 +77,7 @@ def city():
     messagebox.showinfo("City","You walk into the bustling city and shortly after a hobo aproches you." +
                         " This decrepid man in tattered clothes askes you ''You! Do you want some beans?" +
                         " They're great, I guarantee they're quality beans!''")
-    approch = simpledialog.askstring("Beans?","Do you accept the hobo's beans? (Yes/No)")
+    beans = simpledialog.askstring("Beans?","Do you accept the hobo's beans? (Yes/No)")
     if beans == "Yes":
         yesbeans()
     elif beans == "No":
@@ -84,43 +86,42 @@ def city():
         city()        
 
 def yesbeans():
-    messagebox.showinfo("Not Just Your Every Day, Ordinary Beans","")
+    messagebox.showinfo("Not Just Your Every Day, Ordinary Beans","You take the hobo's beans and crack the can open with" +
+                        " an opener he lends you. Quickly after you eat the beans, you feel a funny sensation. You look down to" +
+                        " see that you seemingly are fading from reality and promptly blackout. You awaken to see a completely" +
+                        " different city beneath you feet. The buildings are ragged and old and the streets filled with" +
+                        " hobos. You've unknowingly transported yourself to the lost city of Hobotopolis. You decide that" +
+                        " since you are there you should live in the great metropolis as a hobo yourself. After you settle" +
+                        " in Hobotopolis you live you life as a profesional hobo.")
 
 def nobeans():
-    messagebox.showinfo("","")
+    messagebox.showinfo("That's Not A Can Opener","Clearly offended and angered by your rejection of his can of beans," +
+                        " the hobo pulls a knife on you and mugs you for all your money. After finding out you have no" +
+                        " no such thing you both share a greatly awkward moment of silence before he dashes into a nearby" +
+                        " alley never to be seen again. You soon settle in the city and live a long and ok life.")
     
 def mountains():
-    messagebox.showinfo("Mountain","You trek to the mountain and find yourself at home. you decide to live" +
+    messagebox.showinfo("Mountain","You trek to the mountain and find yourself at home. You decide to live" +
                         " there as a mountain hermit. After several months of living on the mountain, you" +
-                        " are approched by Sassquach. The massive creature approches you, it groans and" +
-<<<<<<< HEAD
-                        " whoops at you, and then waits for a reply")
-=======
-<<<<<<< HEAD
-                        " whoops at you, and then waits for a reply")
-
-=======
-                        " whoops at you, and then waits for a reply.")
->>>>>>> 64a1b1f0fb934899e5f6179f40655b1484ebbfaa
->>>>>>> 86a9387583c3d6343c27b007eb4fa24747f070a2
-    reply = simpledialog.askstring("Don't Sass the Quatch","How do you want to resond to Sassquatch's" +
-                                   " 'question'. (Whoop/Groan)")
+                        " are approched by Sassquach. The massive creature, soon after it approching you," +
+                        " grunts and whoops at you, and then waits for a reply.")
+    reply = simpledialog.askstring("Don't Sass the Squatch","How do you want to resond to Sassquatch's" +
+                                   " 'question'. (Whoop/Grunt)")
     if reply == "Whoop":
         jacklinks()
     elif reply == "Grunt":
         sassed()                
                         
 def jacklinks():
-    messagebox.showinfo("You're Bilingual","you make a a big whoop. Sassquatch replys with another whoop and" +
-                        " pulls out a bag of Jack Links beef jerky and hands it to you. you take the delicious" +
+    messagebox.showinfo("You're Bilingual!","You make a big whoop. Sassquatch replys with another whoop and" +
+                        " pulls out a bag of Jack Links beef jerky and hands it to you. You take the delicious" +
                         " jerky and Sassquatch renturns to the wilds of the mountain. With a full stomach you" +
                         " continue your life as a hermit and live alone for the rest of your life.")                        
 def sassed():                         
     messagebox.showinfo("You Sassed the Squatch","You grunt at Sassquatch. Clearly angered by your reply, he hits" +
-                        " you on the head, knocking you out cold. you wake up to see that Sassquatch has taken you home" +
-                        " and shows no sign of leaving. forced from your home you perish being unable to find food or"+
+                        " you on the head, knocking you out cold. You wake up to see that Sassquatch has taken you home" +
+                        " and shows no sign of leaving. Forced from your home you perish being unable to find food or"+
                         " shelter.")
-    
 
 ###Andrew's Functions###
 #lets start how to do this thing#
@@ -169,7 +170,6 @@ def ruins():
 
 ###Micah's Functions###
 def west():
-<<<<<<< HEAD
     messagebox.showinfo("West","You have to decided to follow the Western Sunset, leading you to a fork in the road. You have a choice to make: Do you take"
                         " the road less traveled, or the road often traveled? You may also go back to where you woke up and choose a different direction to follow.")
     decision = simpledialog.askstring("Which way do you go?", "Type: 'go back' to go back, 'less traveled' to take the road less traveled, or 'often traveled' to" +
