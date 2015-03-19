@@ -35,7 +35,7 @@ w.pack()
 
 ###Intro###
 def intro():
-    messagebox.showinfo("The Crossroads","You wake up in a four way intersection. there are small dirt" +
+    messagebox.showinfo("The Crossroads","You wake up in a four way intersection. There are small dirt" +
                         " paths in a field, one going North, one South, one East, and one West. Which" +
                         " path do you wish to choose?")
     path = simpledialog.askstring("Where to Go","Type the direction you wish to go, choose your path. your options are ''North, South, East, and West''")
@@ -52,9 +52,27 @@ def intro():
         west()
 
     else:
-        intro()    
+        intro()
 
+def intro2():
+    messagebox.showinfo("The Crossroads","you ehad back to the field you woke up in. There are small dirt" +
+                        " paths in a field, one going North, one South, one East, and one West. Which" +
+                        " path do you wish to choose?")
+    path = simpledialog.askstring("Where to Go","Type the direction you wish to go, choose your path. your options are ''North, South, East, and West''")
+    if path == "North":
+        north()
 
+    elif path == "South":
+        south()
+
+    elif path == "East":
+        east()
+
+    elif path == "West":
+        west()
+
+    else:
+        intro2()
 ###Damian's Functions###
 def south():
     messagebox.showinfo("South","You have headed down the South path and arive at a fork in the road. One" +
@@ -67,7 +85,7 @@ def south():
     elif approch == "Mountain":
         mountains()
     elif approch == "Back":
-        intro()    
+        intro2()
     else:
         south()
 
@@ -122,14 +140,14 @@ def sassed():
                         " shelter.")
 
 ###Andrew's Functions###
-#l#lets start how to do this thing#
+##lets start how to do this thing#
 def east():
     messagebox.showinfo("East"," Your journey begins as of now. Yet there is still yet a chance"+
                         " to turn back, if you so choose but only a coward turns back from any"+
                         " adventure presented to him." )
     goback = simpledialog.askstring("turn back?"," Do you desire a different path?")
     if goback == "yes":
-        intro()
+        intro2()
     elif goback == "no":
         easternjourney()
     else:
@@ -205,8 +223,8 @@ def deathbybear():
 def ruins():
     messagebox.showinfo("ruins","you arrivedat the entrance to the ruins it's still light out as the sun sets"+
                          " in front of you, but that cant be right!!? where are you? whats happening! you check"+
-                         " behind youand indeed there is another sun there. curiosity flows through your mind as"+
-                         " you see this phenomena. you still treck towards the ruins in hopes of finding a "+
+                         " behind you and indeed there is another sun there. curiosity flows through your mind as"+
+                         " you see this phenomena. You still treck towards the ruins in hopes of finding a "+
                          " mighty treasure. or any explanation of this land.")    
 
 ###Micah's Functions###
@@ -217,11 +235,13 @@ def west():
                                       " take the road often traveled.")
 
     if decision == "go back":
-        intro()
+        intro2()
     elif decision == "less traveled":
         lesstraveled()
     elif decision == "often traveled":
         oftentraveled()
+    elif decision == "Chuck Norris":
+        chucknorris()
     else:
         messagebox.showinfo("Incorrect", "That isn't an option.")
         west()
@@ -280,7 +300,25 @@ def city():
                         " you and then leave you in the streets, crippled. You eventually get run over by a Mustang playing real life GTA with a" +
                         " friend, who just scored bonus points for hitting a cripple. Never try to walk like a gangster. THANKS FOR PLAYING.")
 
-###Deryk's Functions###
+def chucknorris():
+    messagebox.showinfo("You are Chuck Norris", "You wake up in a field lying on your back. You decide to do push ups. You roll over and do 1000"+
+                        " consecutive push ups, that don't push you up, but instead pushes the world down.")
+    messagebox.showinfo("Walker, Texas Ranger", "After pre workout warm-up, you decide to go on a short run. You decide to sprint from this abandoned field all the way to New York"+
+                        ", crossing over the ocean on foot. Once you reach the shore you decide to swim on land to your destination. After you get to New York, you realize"+
+                        " that you need money, and go to the bank to withdrawal your money. You enter the building and slam the revolving door behind you...")
+    choice1 = simpledialog.askstring("What do you say?", "Type 'rob' to rob the bank, or type 'Chuck Norris' to state you are Chuck Norris.")
+    if choice1 == "rob":
+        rob()
+    elif choice1 == "Chuck Norris":
+        iamnorris()
+
+def rob():
+    messagebox.showinfo("They give up", "You flex your arms, shouting 'bang!' as you do, and people are falling over dead around you. You grab all the money in the bank"+
+                        " and proudly leave.")
+def iamnorris():
+    messagebox.showinfo("I Am Chuck Norris", "You yell 'I AM CHUCK NORRIS!' into the crowd, and people begin bowing and giving you money.")
+
+#Deryk's Functions#
 
 global goback
 goback = 0
@@ -302,7 +340,7 @@ def north():
     elif shipchoice == "walk":
         coast()
     elif shipchoice == "go back":
-        intro()
+        intro2()
     else:
         north()
 
