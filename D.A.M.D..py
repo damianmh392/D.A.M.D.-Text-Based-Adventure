@@ -209,6 +209,7 @@ def ruins():
                          " you see this phenomena. you still treck towards the ruins in hopes of finding a "+
                          " mighty treasure. or any explanation of this land.")    
 
+<<<<<<< HEAD
 
 
 
@@ -218,6 +219,8 @@ def ruins():
 
 
 
+=======
+>>>>>>> ee4901c09ad820619c2a8767a7309709c0b36ed5
 ###Micah's Functions###
 def west():
     messagebox.showinfo("West","You have to decided to follow the Western Sunset, leading you to a fork in the road. You have a choice to make: Do you take"
