@@ -31,17 +31,16 @@ from tkinter import *
 import tkinter.simpledialog
 import tkinter.messagebox
 
-
 root = Tk()
 w = Label(root, text="A D.A.M.D. Adventure")
 w.pack()
 
 ###Intro###
 def intro():
-    messagebox.showinfo("The Crossroads","You wake up in a four way intersection. There are small dirt" +
+    messagebox.showinfo("The Crossroads","You wake up in a four way intersection. there are small dirt" +
                         " paths in a field, one going North, one South, one East, and one West. Which" +
                         " path do you wish to choose?")
-    path = simpledialog.askstring("Where to Go","Type the direction you wish to go, choose your path. Your options are ''North, South, East, and West''")
+    path = simpledialog.askstring("Where to Go","Type the direction you wish to go, choose your path. your options are ''North, South, East, and West''")
     if path == "North":
         north()
 
@@ -55,42 +54,20 @@ def intro():
         west()
 
     else:
-        intro()
-
-def intro2():
-    messagebox.showinfo("The Crossroads","There are small dirt" +
-                        " paths in a field, one going North, one South, one East, and one West. Which" +
-                        " path do you wish to choose?")
-    path = simpledialog.askstring("Where to Go","Type the direction you wish to go, choose your path. Your options are ''North, South, East, and West''")
-    if path == "North":
-        north()
-
-    elif path == "South":
-        south()
-
-    elif path == "East":
-        east()
-
-    elif path == "West":
-        west()
-
-    else:
-        intro2()        
+        intro()    
 
 
 ###Damian's Functions###
 def south():
-    messagebox.showinfo("South","You have headed down the South path and arive at a fork in the road. One" +
-                        " fork leads to a large mountain, practically untouched by man, and the other" +
+    messagebox.showinfo("South","You headed down the south path and arive at a fork in the road. One" +
+                        " fork leads to a large mountain, practicallly untouched by man, and the other" +
                         " to a busy city full of people.")
-    approch = simpledialog.askstring("Where Now?","Do you want to go to the City, the Mountian? Or would you want to go back" +
-                                     " (Mountain/City/Back)")
+    approch = simpledialog.askstring("Where Now?","Do you want to go to the City or the Mountian?" +
+                                     " (Mountain/City)")
     if approch == "City":
         city()
     elif approch == "Mountain":
         mountains()
-    elif approch == "Back":
-        intro2()    
     else:
         south()
 
@@ -98,7 +75,7 @@ def city():
     messagebox.showinfo("City","You walk into the bustling city and shortly after a hobo aproches you." +
                         " This decrepid man in tattered clothes askes you ''You! Do you want some beans?" +
                         " They're great, I guarantee they're quality beans!''")
-    beans = simpledialog.askstring("Beans?","Do you accept the hobo's beans? (Yes/No)")
+    approch = simpledialog.askstring("Beans?","Do you accept the hobo's beans? (Yes/No)")
     if beans == "Yes":
         yesbeans()
     elif beans == "No":
@@ -107,41 +84,41 @@ def city():
         city()        
 
 def yesbeans():
-    messagebox.showinfo("Not Just Your Every Day, Ordinary Beans","You take the hobo's beans and crack the can open with" +
-                        " an opener he lends you. Quickly after you eat the beans, you feel a funny sensation. You look down to" +
-                        " see that you seemingly are fading from reality and promptly blackout. You awaken to see a completely" +
-                        " different city beneath you feet. The buildings are ragged and old and the streets filled with" +
-                        " hobos. You've unknowingly transported yourself to the lost city of Hobotopolis. You decide that" +
-                        " since you are there you should live in the great metropolis as a hobo yourself. After you settle" +
-                        " in Hobotopolis you live you life as a profesional hobo.")
+    messagebox.showinfo("Not Just Your Every Day, Ordinary Beans","")
 
 def nobeans():
-    messagebox.showinfo("That's Not A Can Opener","Clearly offended and angered by your rejection of his can of beans," +
-                        " the hobo pulls a knife on you and mugs you for all your money. After finding out you have no" +
-                        " no such thing you both share a greatly awkward moment of silence before he dashes into a nearby" +
-                        " alley never to be seen again. You soon settle in the city and live a long and ok life.")
+    messagebox.showinfo("","")
     
 def mountains():
-    messagebox.showinfo("Mountain","You trek to the mountain and find yourself at home. You decide to live" +
+    messagebox.showinfo("Mountain","You trek to the mountain and find yourself at home. you decide to live" +
                         " there as a mountain hermit. After several months of living on the mountain, you" +
-                        " are approched by Sassquach. The massive creature, soon after it approching you," +
-                        " grunts and whoops at you, and then waits for a reply.")
-    reply = simpledialog.askstring("Don't Sass the Squatch","How do you want to resond to Sassquatch's" +
-                                   " 'question'. (Whoop/Grunt)")
+                        " are approched by Sassquach. The massive creature approches you, it groans and" +
+<<<<<<< HEAD
+                        " whoops at you, and then waits for a reply")
+=======
+<<<<<<< HEAD
+                        " whoops at you, and then waits for a reply")
+
+=======
+                        " whoops at you, and then waits for a reply.")
+>>>>>>> 64a1b1f0fb934899e5f6179f40655b1484ebbfaa
+>>>>>>> 86a9387583c3d6343c27b007eb4fa24747f070a2
+    reply = simpledialog.askstring("Don't Sass the Quatch","How do you want to resond to Sassquatch's" +
+                                   " 'question'. (Whoop/Groan)")
     if reply == "Whoop":
         jacklinks()
     elif reply == "Grunt":
         sassed()                
                         
 def jacklinks():
-    messagebox.showinfo("You're Bilingual!","You make a big whoop. Sassquatch replys with another whoop and" +
-                        " pulls out a bag of Jack Links beef jerky and hands it to you. You take the delicious" +
+    messagebox.showinfo("You're Bilingual","you make a a big whoop. Sassquatch replys with another whoop and" +
+                        " pulls out a bag of Jack Links beef jerky and hands it to you. you take the delicious" +
                         " jerky and Sassquatch renturns to the wilds of the mountain. With a full stomach you" +
                         " continue your life as a hermit and live alone for the rest of your life.")                        
 def sassed():                         
     messagebox.showinfo("You Sassed the Squatch","You grunt at Sassquatch. Clearly angered by your reply, he hits" +
-                        " you on the head, knocking you out cold. You wake up to see that Sassquatch has taken you home" +
-                        " and shows no sign of leaving. Forced from your home you perish being unable to find food or"+
+                        " you on the head, knocking you out cold. you wake up to see that Sassquatch has taken you home" +
+                        " and shows no sign of leaving. forced from your home you perish being unable to find food or"+
                         " shelter.")
     
 
@@ -153,7 +130,7 @@ def east():
                         " adventure presented to him." )
     goback = simpledialog.askstring("turn back?"," Do you desire a different path?")
     if goback == "yes":
-        intro2()
+        intro()
     elif goback == "no":
         easternjourney()
     else:
@@ -190,17 +167,16 @@ def ruins():
                          " you see this phenomena. you still treck towards the ruins in hopes of finding a "+
                          " mighty treasure. or any explanation of this land.")    
 
-########################Micah's Functions########################
-        
-        
+###Micah's Functions###
 def west():
+<<<<<<< HEAD
     messagebox.showinfo("West","You have to decided to follow the Western Sunset, leading you to a fork in the road. You have a choice to make: Do you take"
-                        "the road less traveled, or the road often traveled? You may also go back to where you woke up and choose a different direction to follow.")
-    decision = simpledialog.askstring("Which way do you go?", "Type: 'go back' to go back, 'less traveled' to take the road less traveled, or 'often traveled' to take the often"
-                                      "the road often traveled.")
+                        " the road less traveled, or the road often traveled? You may also go back to where you woke up and choose a different direction to follow.")
+    decision = simpledialog.askstring("Which way do you go?", "Type: 'go back' to go back, 'less traveled' to take the road less traveled, or 'often traveled' to" +
+                                      " take the road often traveled.")
 
     if decision == "go back":
-        intro2()
+        intro()
     elif decision == "less traveled":
         lesstraveled()
     elif decision == "often traveled":
@@ -210,48 +186,58 @@ def west():
         west()
         
 def lesstraveled():
-    decision1 = simpledialog.askstring("The road less traveled", "As you head down the far less beaten path, you notice yourself trekking further" +
+    messagebox.showinfo("The road less traveled", "As you head down the far less beaten path, you notice yourself trekking further" +
                         " into a peaceful forest. After hours of hiking, you come across a magnificent cabin! Do you go inside it, or continue walking on" +
-                        " the path? Type 'cabin' to go into the cabin, or 'walk' to keep on walking.")
-    if decision1 == cabin:
-        cabin()
-    elif decision1 == walk:
+                        " the path into the forest? Type 'cabin' to go into the cabin, or 'forest' to keep on walking.")
+    
+    decision1 = simpledialog.askstring("ASKING", "Type 'forest' to go into the forest, or 'cabin' to enter the cabin.")
+    
+    if decision1 == "forest":
         forest()
-    else:
-        messagebox.showinfo("Nope", "There's nothing else to do, please choose one of the available options.")
-        lesstraveled()
 
+    elif decision1 == "cabin":
+        cabin()
+
+def forest():
+    messagebox.showinfo("THE FOREST", "You keep on walking through the beautiful woods, and listen to the serene sounds of nature; the sound of" +
+                        " squirrels playing with each other, the wind rustling in the trees, and feeling the warm sun on your face. As you listen" +
+                        " closely, the sounds start to grow louder... You open your eyes and see a large sign ahead reading 'Beware Rabid Animals!'"+
+                        " You turn around to see an army of rabid squirrels heading towards you. You attempt to run, but they throw many acorns" +
+                        " at you, causing you to fall down. They amass on your body, and carry you away just like Veruca from Willy Wonka. Except you" +
+                        " don't survive. THANKS FOR PLAYING.")
 
 def cabin():
-    messagebox.showinfo("THE CABIN", "You push your way into the large cabin door, and it is silent as you work it open. The" +
-                        " room is large, and dimly lit with natural light. It is decorated with typical cabin decor, and many animal heads" +
-                        ". You make your way into the kitchen, trying not to stumble, when you hear a raspy voice come from behind:" +
-                        " 'Would you like to join me for dinner?' You turn around to see a burly man with a raggedy head of hair and a" +
-                        " dark, thick beard. He approaches you with a knife.")
-    dinner = simpledialog.askstring("What do you do?", "Type 'yes' to join the man in dinner, or 'no' to run out of the house.")
-        if dinner == "yes":
-            dinnerdeath()
-        elif dinner == "no":
-            dinnerlive()
-
-def dinnerdeath():
-    messagebox.showinfo("Time for dinner", "You happily say yes, and the man smiles eerily. He grabs you and pulls you" +
-                        " into the kitchen where he proceeds to murder you, and incorporates you into his dinner. Curiosity lead to" +
-                        " cannibalism.. THANKS FOR PLAYING.")
-def dinnerlive():
-    messagebox.showinfo("Time to run", "You 
-#def forest():
-#def rabidanimals():
-
-#def oftentraveled():
-
-#def sunnyhighway():
-#def sunglare():
-
-#def backroad():
-#def getmugged():#
+    messagebox.showinfo("THE CABIN", "You approach the large log cabin, which appears to have been untouched for many years. You enter the front door" +
+                         ", which is unlocked, and venture into the dark corridors. As you slowly proceed into the kitchen, you hear a raspy voiced man say" +
+                         " 'Hello there little one.. Come have dinner with me...' He smiles eerily, and begins walking at you with a knife. You try to" +
+                         " run but he is too quick, and caannibalizes you. Curiosity lead to cannibalism. THANKS FOR PLAYING.")
 
 
+def oftentraveled():
+    messagebox.showinfo("The road often traveled", "You take the already beaten and friendly looking path. It looks very artificial and makes the" +
+                        " forest feel somewhat more secure. After walking for some time, you come a cross a split path. One way leads to an" +
+                        " interestingly empty but sunny freeway, and the other leads to a ghetto city. Which way do you go? Type 'highway' for the" +
+                        " highway, or 'city' for the ghetto city.")
+    
+    decision2 = simpledialog.askstring("ASKING", "Type 'city' to go there, or 'highway' to go there.")
+    
+    if decision2 == "highway":
+        highway()
+    elif decision2 == "city":
+        city()
+
+def highway():
+    messagebox.showinfo("SUNNY HIGHWAY", "You walk into the large, open, sunny freeway. There are almost no cars about on the road, and whatever is there is" +
+                        " abandoned. You find a sick Corvette and decide to hotwire it. You get the engine revving, and off you go at high speeds." +
+                        " Despite your expert driving skills, a sunglare bounces off the mirror in the car that you were admiring yourself in and" +
+                        " blinds you. You veer into the divider and flip over. You were knocked unconcious, but wake up realitively unharmed, the car now" +
+                        " upside down. As you attempt to get out, a spill of gasoline is ignited by a sun ray and bursts into flame, engulfing" +
+                        " the car, and you, with it. Always wear sunglasses on sunny days. THANKS FOR PLAYING.")
+
+def city():
+    messagebox.showinfo("GHETTO CITY", "You swagger into the city, trying to fit in with the local gang members. They don't like that. They promptly mug" +
+                        " you and then leave you in the streets, crippled. You eventually get run over by a Mustang playing real life GTA with a" +
+                        " friend, who just scored bonus points for hitting a cripple. Never try to walk like a gangster. THANKS FOR PLAYING.")
 
 ###Deryk's Functions###
 
@@ -275,7 +261,7 @@ def north():
     elif shipchoice == "walk":
         coast()
     elif shipchoice == "go back":
-        intro2()
+        intro()
     else:
         north()
 
@@ -293,6 +279,27 @@ def ship():
         north()
     else:
         ship()
+
+def sail():
+    messagebox.showinfo("Set Sail!","You decide to set sail with the crew. You are treated as a passenger, who really does nothing and eats the sailors' food.")
+    messagebox.showinfo("Slavers!", "When you reach the end of your trip, you are ushered off the ship, only to find a man with cages and rope in front of you. " +
+                        "There's an exchange of money between the captain and the man, and despite your best efforts, you are bound and put into a cage. " +
+                        "You are damned to live the rest of your life as a slave.")
+    messagebox. showinfo("THE END", "THE END")
+
+def pirate():
+    messagebox.showinfo("Ship", "You step onto the ship, proclaiming that you are now the new captain, and to expel the old leadership. " +
+                        "All the sailors look at you funny, and the captain walks out to see the fuss.")
+    messagebox.showinfo("Challenge!", "'What do you think you're doing?!' he exclaims. 'Get off my ship!' You stare at him blankly for a few moments, " +
+                        "then slap him across the face with a glove, throwing it to the ground.")
+    messagebox.showinfo("OOOOH!", "He stands flabbergasted. You take the opportunity to hoist him up onto your shoulders and throw him overboard. " +
+                        "He falls to the ocean with a splash. He's immediately eaten by a shark.")
+    messagebox.showinfo("New Captain!", "The sailors look at you, stunned, for a moment. Then they break into cheer. " +
+                        "'Hail the new captain!' they yell. You give the order to set off to sea.")
+    messagebox.showinfo("PIRATES!", "You spend a good five years raiding coastal towns and cities in your new ship with your newfound pirate crew. " +
+                        "Unfortunately, one day you contract a sickness, and your second mate, in your weakened state, assumes command and leaves you sickened. " +
+                        "You are damned to die of scurvy.")
+    messagebox.showinfo("THE END", "THE END")
 
 def coast():
     coastchoice = simpledialog.askstring("Walk the coast","You decide to walk the coast. Do you wish to go 'left', 'right', or 'go back'?")
