@@ -211,12 +211,35 @@ def west():
         
 def lesstraveled():
     decision1 = simpledialog.askstring("The road less traveled", "As you head down the far less beaten path, you notice yourself trekking further" +
-                        " into an eerie forest. After hours of hiking, you come across a magnificent cabin! Do you go inside it, or continue walking on" +
+                        " into a peaceful forest. After hours of hiking, you come across a magnificent cabin! Do you go inside it, or continue walking on" +
                         " the path? Type 'cabin' to go into the cabin, or 'walk' to keep on walking.")
+    if decision1 == cabin:
+        cabin()
+    elif decision1 == walk:
+        forest()
+    else:
+        messagebox.showinfo("Nope", "There's nothing else to do, please choose one of the available options.")
+        lesstraveled()
 
-#def cabin():
-#def rabidman():
-    
+
+def cabin():
+    messagebox.showinfo("THE CABIN", "You push your way into the large cabin door, and it is silent as you work it open. The" +
+                        " room is large, and dimly lit with natural light. It is decorated with typical cabin decor, and many animal heads" +
+                        ". You make your way into the kitchen, trying not to stumble, when you hear a raspy voice come from behind:" +
+                        " 'Would you like to join me for dinner?' You turn around to see a burly man with a raggedy head of hair and a" +
+                        " dark, thick beard. He approaches you with a knife.")
+    dinner = simpledialog.askstring("What do you do?", "Type 'yes' to join the man in dinner, or 'no' to run out of the house.")
+        if dinner == "yes":
+            dinnerdeath()
+        elif dinner == "no":
+            dinnerlive()
+
+def dinnerdeath():
+    messagebox.showinfo("Time for dinner", "You happily say yes, and the man smiles eerily. He grabs you and pulls you" +
+                        " into the kitchen where he proceeds to murder you, and incorporates you into his dinner. Curiosity lead to" +
+                        " cannibalism.. THANKS FOR PLAYING.")
+def dinnerlive():
+    messagebox.showinfo("Time to run", "You 
 #def forest():
 #def rabidanimals():
 
