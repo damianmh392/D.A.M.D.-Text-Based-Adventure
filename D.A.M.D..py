@@ -28,8 +28,8 @@ git push origin master
 
 
 from tkinter import *
-import tkinter.simpledialog
-import tkinter.messagebox
+import tkinter.simpledialog as simpledialog
+import tkinter.messagebox as messagebox
 
 root = Tk()
 w = Label(root, text="A D.A.M.D. Adventure")
@@ -69,7 +69,7 @@ def south():
     elif approch == "Mountain":
         mountains()
     elif approch == "Back":
-        intro2()    
+        intro()    
     else:
         south()
 
