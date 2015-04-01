@@ -1,3 +1,4 @@
+
 #D.A.M.D. Text Based Adventure
 #BY:
 #   Damian Manning-Henseler
@@ -179,48 +180,42 @@ def caveorlake():
 
 
 def cave():
-    messagebox.showinfo("cave","the cave entrance is large. A horrible smell emerses from the mouth of the cave, the"+
+    messagebox.showinfo("cave","The cave entrance is large. A horrible smell emerses from the mouth of the cave, the"+
                         " smell of death. you see a slight glimmer deep inside the cave. This could be that ancient secret...")
 
     caveenter = simpledialog.askstring("Enter The Cave?"," Do yoyu want to go into the cave or wait untill morning?"+
                                        "''enter'' or, ''wait''")
 
     if caveenter == "enter":
-        enterecave()
-    elif entercave == "wait":
+        caveenter()
+    elif caveenter == "wait":
         deadbybear()
     else:
         cave()
 
 
 def entercave():
-    messagebox.showinfo("Grimacing scene","")
+    messagebox.showinfo("Grimacing scene","bones lay across th floor and an intimidating smell fills your nostils'"+
+                        " the cave suddenly becomes dark as a great bear blocks the opening.")
+    messagebox.showinfo("Dead","The mighty bear tears your flesh apart devouring your entire being and soul.")
+    messagebox.showinfo("The End","THE END")
 
 
 
-def deathbybear():
-    messagebox.showinfo("DEAD","you rest apon the threshhold of the cave")
-    
+def deadbybear():
+    messagebox.showinfo("Rest","you rest apon the threshhold of the cave and quickly fall asleep")
+    messagebox.showinfo("Dead","you hear rustling among the brush and deep heavy breathing. it"+
+                        " is a great bear, it kills you and feeds you to its bear cub in the cave.")
 
 def ruins():
     messagebox.showinfo("ruins","you arrivedat the entrance to the ruins it's still light out as the sun sets"+
                          " in front of you, but that cant be right!!? where are you? whats happening! you check"+
                          " behind youand indeed there is another sun there. curiosity flows through your mind as"+
                          " you see this phenomena. you still treck towards the ruins in hopes of finding a "+
-                         " mighty treasure. or any explanation of this land.")    
-
-<<<<<<< HEAD
-
+                         " mighty treasure. or any explanation of this land.")
+    whispersinruins()
 
 
-
-
-
-
-
-
-=======
->>>>>>> ee4901c09ad820619c2a8767a7309709c0b36ed5
 ###Micah's Functions###
 def west():
     messagebox.showinfo("West","You have to decided to follow the Western Sunset, leading you to a fork in the road. You have a choice to make: Do you take"
