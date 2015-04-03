@@ -54,7 +54,6 @@ def intro():
 
     else:
         intro()
-<<<<<<< HEAD
 
 def intro2():
     messagebox.showinfo("The Crossroads","you ehad back to the field you woke up in. There are small dirt" +
@@ -70,7 +69,6 @@ def intro2():
     elif path == "East":
         east()
 
-=======
 
 def intro2():
     messagebox.showinfo("The Crossroads","you ehad back to the field you woke up in. There are small dirt" +
@@ -86,7 +84,6 @@ def intro2():
     elif path == "East":
         east()
 
->>>>>>> 6f13626a3da128e550ac4dcbc24008510e2b7985
     elif path == "West":
         west()
 
@@ -214,7 +211,6 @@ def caveorlake():
         messagebox.showinfo("waitwhat?","sorry... what was your decision??")
         caveorlake()
 
-<<<<<<< HEAD
 def lake():
     messagebox.showinfo("Great Lake","as you aproach the lake a beautiful lady comes foth and offers you a magical sword, the likes"+
                         " of which has never been seen, so sharp wounds can never heal. do you take the sword?")
@@ -234,9 +230,6 @@ def takensword():
     messagebox.showinfo("Dead","As you may, or may not know. being headless causes a serious illness the likes of which leads directly to death.")
 
     
-=======
-
->>>>>>> 6f13626a3da128e550ac4dcbc24008510e2b7985
 def cave():
     messagebox.showinfo("cave","The cave entrance is large. A horrible smell emerses from the mouth of the cave, the"+
                         " smell of death. you see a slight glimmer deep inside the cave. This could be that ancient secret...")
@@ -245,11 +238,8 @@ def cave():
                                        "''enter'' or, ''wait''")
 
     if caveenter == "enter":
-<<<<<<< HEAD
         entercave()
-=======
-        caveenter()
->>>>>>> 6f13626a3da128e550ac4dcbc24008510e2b7985
+
     elif caveenter == "wait":
         deadbybear()
     else:
@@ -263,30 +253,11 @@ def entercave():
     messagebox.showinfo("The End","THE END")
 
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 6f13626a3da128e550ac4dcbc24008510e2b7985
 def deadbybear():
     messagebox.showinfo("Rest","you rest apon the threshhold of the cave and quickly fall asleep")
     messagebox.showinfo("Dead","you hear rustling among the brush and deep heavy breathing. it"+
                         " is a great bear, it kills you and feeds you to its bear cub in the cave.")
 
-def ruins():
-<<<<<<< HEAD
-    messagebox.showinfo("ruins","you arrived at the entrance to the ruins. it's still light out as the sun sets"+
-=======
-    messagebox.showinfo("ruins","you arrivedat the entrance to the ruins it's still light out as the sun sets"+
->>>>>>> 6f13626a3da128e550ac4dcbc24008510e2b7985
-                         " in front of you, but that cant be right!!? where are you? whats happening! you check"+
-<<<<<<< HEAD
-                         " behind youand indeed there is another sun there. curiosity flows through your mind as"+
-                         " you see this phenomena. you still treck towards the ruins in hopes of finding a "+
-                         " mighty treasure. or any explanation of this land.")
-<<<<<<< HEAD
-    
-    whispersinruins()
-    
 def whispersinruins():
     messagebox.showinfo("strange voices","Near entering the ruins you hear voices on the inside, you can go in and follow them,"+
                         " go in the ruins and ignore the voices, or treck around the ruins entirely which do you choose?")
@@ -299,29 +270,23 @@ def whispersinruins():
     else:
         whispersinruins()
 
-        
 def intoruins():
     messagebox.showinfo("voices stopped","the voices have stopped and the gateway behind you dissapears, trapped in the labyrinth. for eternity you are"+
                         " trapped in as a lost soul. and eventually you die alone, forever lost.")
+
 def aroundruins():
     messagebox.showinfo("a magical chest","Youve come across a chest kept in poor condition, weather beaten, and worn. in your great excitement you open it"+
                         " unknowingly activating an ancient curse, forever hencefort you are damned, losing your mind and your sanity.")
     messagebox.showinfo("The End","Youve tryed at this life and lost, sorry. Better luck next time.")
 
-
-
-=======
+def ruins():
+    messagebox.showinfo("ruins","you arrived at the entrance to the ruins it's still light out as the sun sets"+
+                         " in front of you, but that cant be right!!? where are you? whats happening! you check"+
+                         " behind you and indeed there is another sun there. curiosity flows through your mind as"+
+                         " you see this phenomena. you still treck towards the ruins in hopes of finding a "+
+                         " mighty treasure. or any explanation of this land.")
     whispersinruins()
 
-=======
-                         " behind you and indeed there is another sun there. curiosity flows through your mind as"+
-                         " you see this phenomena. You still treck towards the ruins in hopes of finding a "+
-                         " mighty treasure. or any explanation of this land.")    
->>>>>>> 629b4972fee158709d8fbb6b8c41496489cf9c80
->>>>>>> 6f13626a3da128e550ac4dcbc24008510e2b7985
-
-
-    
 ###Micah's Functions###
 def west():
     messagebox.showinfo("West","You have to decided to follow the Western Sunset, leading you to a fork in the road. You have a choice to make: Do you take"
