@@ -1,3 +1,4 @@
+
 #D.A.M.D. Text Based Adventure
 #BY:
 #   Damian Manning-Henseler
@@ -10,7 +11,6 @@
 
 ########## GIT CODE NEEDED ##########
 '''
-
 cd 'program directory'
 git pull origin master
     #####work on program#####
@@ -19,7 +19,6 @@ git status
 git commit -m "state what you did for the program"
 git status
 git push origin master
-
 '''
 
 
@@ -37,7 +36,7 @@ w.pack()
 
 ###Intro###
 def intro():
-    messagebox.showinfo("The Crossroads","You wake up in a four way intersection. there are small dirt" +
+    messagebox.showinfo("The Crossroads","You wake up in a four way intersection. There are small dirt" +
                         " paths in a field, one going North, one South, one East, and one West. Which" +
                         " path do you wish to choose?")
     path = simpledialog.askstring("Where to Go","Type the direction you wish to go, choose your path. your options are ''North, South, East, and West''")
@@ -54,9 +53,27 @@ def intro():
         west()
 
     else:
-        intro()    
+        intro()
 
+def intro2():
+    messagebox.showinfo("The Crossroads","you ehad back to the field you woke up in. There are small dirt" +
+                        " paths in a field, one going North, one South, one East, and one West. Which" +
+                        " path do you wish to choose?")
+    path = simpledialog.askstring("Where to Go","Type the direction you wish to go, choose your path. your options are ''North, South, East, and West''")
+    if path == "North":
+        north()
 
+    elif path == "South":
+        south()
+
+    elif path == "East":
+        east()
+
+    elif path == "West":
+        west()
+
+    else:
+        intro2()
 ###Damian's Functions###
 def south():
     messagebox.showinfo("South","You have headed down the South path and arive at a fork in the road. One" +
@@ -69,7 +86,7 @@ def south():
     elif approch == "Mountain":
         mountains()
     elif approch == "Back":
-        intro()    
+        intro2()
     else:
         south()
 
@@ -124,7 +141,7 @@ def sassed():
                         " shelter.")
 
 ###Andrew's Functions###
-#lets start how to do this thing#
+##lets start how to do this thing#
 def east():
     messagebox.showinfo("East"," Your journey begins as of now. Yet there is still yet a chance"+
                         " to turn back, if you so choose but only a coward turns back from any"+
@@ -160,14 +177,106 @@ def mountain():
                          " behind youand indeed there is another sun there. curiosity flows through your mind as"+
                          " you see this phenomena. you still treck towards the mountain in hopes of finding an "+
                          " ancient secret. or any explanation of this land.")
+    caveorlake()
+
+
+def caveorlake():
+
+    messagebox.showinfo("mountain pass","You come in a fork in the path. you see down one end there is a lake,"+
+                        " shining ine the sunset from the east. on the other path leads to what appears to be a cave"
+                        " in the far distance.")
+
+
+    cavelake = simpledialog.askstring("fork in the road","do you go to the lake or the cave?")
+    if cavelake == "lake":
+        lake()
+    elif cavelake == "cave":
+        cave()
+    else:
+        messagebox.showinfo("waitwhat?","sorry... what was your decision??")
+        caveorlake()
+
+def lake():
+    messagebox.showinfo("Great Lake","as you aproach the lake a beautiful lady comes foth and offers you a magical sword, the likes"+
+                        " of which has never been seen, so sharp wounds can never heal. do you take the sword?")
+
+    takethesword = simpledialog.askstring("Take sword?","''yes'' or ''no''")
+
+    if takethesword == "yes":
+        takensword()
+    elif takethesword == "no":
+        takensword()
+    else:
+        lake()
+def takensword():
+    messagebox.showinfo("not too fast now...","The lovely lady becomes flustered and hostile, she meant only for you to admire her"+
+                        " which you clearly did not in the means she wanted. with Great Might she swings the sword at you and cleanly"+
+                        " removes your head from your now lifeless body")
+    messagebox.showinfo("Dead","As you may, or may not know. being headless causes a serious illness the likes of which leads directly to death.")
+
+    
+def cave():
+    messagebox.showinfo("cave","The cave entrance is large. A horrible smell emerses from the mouth of the cave, the"+
+                        " smell of death. you see a slight glimmer deep inside the cave. This could be that ancient secret...")
+
+    caveenter = simpledialog.askstring("Enter The Cave?"," Do yoyu want to go into the cave or wait untill morning?"+
+                                       "''enter'' or, ''wait''")
+
+    if caveenter == "enter":
+        entercave()
+    elif caveenter == "wait":
+        deadbybear()
+    else:
+        cave()
+
+
+def entercave():
+    messagebox.showinfo("Grimacing scene","bones lay across th floor and an intimidating smell fills your nostils'"+
+                        " the cave suddenly becomes dark as a great bear blocks the opening.")
+    messagebox.showinfo("Dead","The mighty bear tears your flesh apart devouring your entire being and soul.")
+    messagebox.showinfo("The End","THE END")
+
+
+def deadbybear():
+    messagebox.showinfo("Rest","you rest apon the threshhold of the cave and quickly fall asleep")
+    messagebox.showinfo("Dead","you hear rustling among the brush and deep heavy breathing. it"+
+                        " is a great bear, it kills you and feeds you to its bear cub in the cave.")
 
 def ruins():
-    messagebox.showinfo("ruins","you arrived earlier than you must have thought its still light out as the sun sets"+
+    messagebox.showinfo("ruins","you arrived at the entrance to the ruins. it's still light out as the sun sets"+
                          " in front of you, but that cant be right!!? where are you? whats happening! you check"+
                          " behind youand indeed there is another sun there. curiosity flows through your mind as"+
                          " you see this phenomena. you still treck towards the ruins in hopes of finding a "+
-                         " mighty treasure. or any explanation of this land.")    
+                         " mighty treasure. or any explanation of this land.")
+    
+    whispersinruins()
+    
+def whispersinruins():
+    messagebox.showinfo("strange voices","Near entering the ruins you hear voices on the inside, you can go in and follow them,"+
+                        " go in the ruins and ignore the voices, or treck around the ruins entirely which do you choose?")
+    enterruins = simpledialog.askstring("go in or around?","you can go into the ruins or go around. the decision of ignoring the voices comes later"+
+                                          " you can ''go in'', or ''go around''")
+    if enterruins == "go in":
+        intoruins()
+    elif enterruins == "go around":
+        aroundruins()
+    else:
+        whispersinruins()
 
+        
+def intoruins():
+    messagebox.showinfo("voices stopped","the voices have stopped and the gateway behind you dissapears, trapped in the labyrinth. for eternity you are"+
+                        " trapped in as a lost soul. and eventually you die alone, forever lost.")
+def aroundruins():
+    messagebox.showinfo("a magical chest","Youve come across a chest kept in poor condition, weather beaten, and worn. in your great excitement you open it"+
+                        " unknowingly activating an ancient curse, forever hencefort you are damned, losing your mind and your sanity.")
+    messagebox.showinfo("The End","Youve tryed at this life and lost, sorry. Better luck next time.")
+
+
+
+
+
+    
 ###Micah's Functions###
 def west():
     messagebox.showinfo("West","You have to decided to follow the Western Sunset, leading you to a fork in the road. You have a choice to make: Do you take"
@@ -176,11 +285,13 @@ def west():
                                       " take the road often traveled.")
 
     if decision == "go back":
-        intro()
+        intro2()
     elif decision == "less traveled":
         lesstraveled()
     elif decision == "often traveled":
         oftentraveled()
+    elif decision == "Chuck Norris":
+        chucknorris()
     else:
         messagebox.showinfo("Incorrect", "That isn't an option.")
         west()
@@ -239,7 +350,25 @@ def city():
                         " you and then leave you in the streets, crippled. You eventually get run over by a Mustang playing real life GTA with a" +
                         " friend, who just scored bonus points for hitting a cripple. Never try to walk like a gangster. THANKS FOR PLAYING.")
 
-###Deryk's Functions###
+def chucknorris():
+    messagebox.showinfo("You are Chuck Norris", "You wake up in a field lying on your back. You decide to do push ups. You roll over and do 1000"+
+                        " consecutive push ups, that don't push you up, but instead pushes the world down.")
+    messagebox.showinfo("Walker, Texas Ranger", "After pre workout warm-up, you decide to go on a short run. You decide to sprint from this abandoned field all the way to New York"+
+                        ", crossing over the ocean on foot. Once you reach the shore you decide to swim on land to your destination. After you get to New York, you realize"+
+                        " that you need money, and go to the bank to withdrawal your money. You enter the building and slam the revolving door behind you...")
+    choice1 = simpledialog.askstring("What do you say?", "Type 'rob' to rob the bank, or type 'Chuck Norris' to state you are Chuck Norris.")
+    if choice1 == "rob":
+        rob()
+    elif choice1 == "Chuck Norris":
+        iamnorris()
+
+def rob():
+    messagebox.showinfo("They give up", "You flex your arms, shouting 'bang!' as you do, and people are falling over dead around you. You grab all the money in the bank"+
+                        " and proudly leave.")
+def iamnorris():
+    messagebox.showinfo("I Am Chuck Norris", "You yell 'I AM CHUCK NORRIS!' into the crowd, and people begin bowing and giving you money.")
+
+#Deryk's Functions#
 
 global goback
 goback = 0
@@ -261,7 +390,7 @@ def north():
     elif shipchoice == "walk":
         coast()
     elif shipchoice == "go back":
-        intro()
+        intro2()
     else:
         north()
 
@@ -332,5 +461,3 @@ intro()
 
 root.destroy()     
         
-
-
